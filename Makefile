@@ -237,10 +237,10 @@ release:
 build-docker:
 	export IMAGE_NAME=rasa && \
 	docker buildx use default && \
-	docker buildx bake -f docker/docker-bake.hcl base && \
-	docker buildx bake -f docker/docker-bake.hcl base-poetry && \
-	docker buildx bake -f docker/docker-bake.hcl base-builder && \
-	docker buildx bake -f docker/docker-bake.hcl default
+	docker buildx bake -f docker-bake.hcl base && \
+	docker buildx bake -f docker-bake.hcl base-poetry && \
+	docker buildx bake -f docker-bake.hcl base-builder && \
+	docker buildx bake -f docker-bake.hcl default
 
 build-docker-full:
 	export IMAGE_NAME=rasa && \
